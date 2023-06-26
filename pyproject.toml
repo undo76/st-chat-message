@@ -1,12 +1,10 @@
 [tool.poetry]
 name = "st-chat-message"
-version = "0.2.0"
+version = "0.3.0"
 description = "A Streamlit component to display chat messages"
 authors = ["Manolo Santos <manolo.santos@gmail.com>"]
 readme = "README.md"
-packages = [
-    { include = "st_chat_message"},
-]
+packages = [{ include = "st_chat_message"}]
 
 license = "MIT"
 
