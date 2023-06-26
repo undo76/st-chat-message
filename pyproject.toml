@@ -1,0 +1,28 @@
+[tool.poetry]
+name = "st-chat-message"
+version = "0.1.0"
+description = "A Streamlit component to display chat messages"
+authors = ["Manolo Santos <manolo.santos@gmail.com>"]
+readme = "README.md"
+packages = [
+    { include = "st_chat_message"},
+]
+
+license = "MIT"
+
+# Only include the out directory of the frontend
+# The order of the include/exclude lists is important!
+include = ["st_chat_message/frontend/out/**"]
+exclude = ["st_chat_message/frontend/*"]
+
+[tool.poetry.dependencies]
+python = ">=3.8,<3.9.7 || >3.9.7,<4.0"
+streamlit = ">=0.63"
+
+[tool.poetry.group.dev.dependencies]
+watchdog = "^3.0.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+

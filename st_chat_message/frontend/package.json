@@ -1,0 +1,40 @@
+{
+  "name": "streamlit-rich-chat",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "npx serve@latest out",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@heroicons/react": "^2.0.18",
+    "@tailwindcss/typography": "^0.5.9",
+    "next": "13.4.7",
+    "prettier": "^2.8.8",
+    "react": "18.2.0",
+    "react-copy-to-clipboard": "^5.1.0",
+    "react-dom": "18.2.0",
+    "react-markdown": "^8.0.7",
+    "react-syntax-highlighter": "^15.5.0",
+    "rehype-katex": "^6.0.3",
+    "rehype-raw": "^6.1.1",
+    "remark-gfm": "^3.0.1",
+    "remark-math": "^5.1.1",
+    "streamlit-component-lib-react-hooks": "^1.1.0"
+  },
+  "devDependencies": {
+    "@types/node": "20.3.1",
+    "@types/react": "18.2.14",
+    "@types/react-copy-to-clipboard": "^5.0.4",
+    "@types/react-dom": "18.2.6",
+    "@types/react-syntax-highlighter": "^15.5.7",
+    "autoprefixer": "^10.4.14",
+    "eslint": "8.43.0",
+    "eslint-config-next": "13.4.7",
+    "postcss": "^8.4.24",
+    "tailwindcss": "^3.3.2",
+    "typescript": "5.1.3"
+  }
+}
