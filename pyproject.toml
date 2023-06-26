@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "st-chat-message"
-version = "0.1.0"
+version = "0.2.0"
 description = "A Streamlit component to display chat messages"
 authors = ["Manolo Santos <manolo.santos@gmail.com>"]
 readme = "README.md"
