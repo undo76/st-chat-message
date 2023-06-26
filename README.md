@@ -29,4 +29,4 @@ message("Hello world!", is_user=True)
 message("Hi")
 ```
 
-![img.png](img.png)
+![img.png](docs/img.png)
