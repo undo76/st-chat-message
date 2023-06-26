@@ -3,9 +3,9 @@ import streamlit as st
 from st_chat_message import message
 
 msg1 = """
-Hi, this is a message from the bot. You can use this component to create a chatbot in your streamlit app.
+Hi! I can pass the butter.
 
-I can display some **markdown**. I can also display some `code`.
+I can also display some **markdown**, including code:
 
 ```python
 import streamlit as st
@@ -41,17 +41,17 @@ I can also display tabular data.
 
 if "msgs" not in st.session_state:
     st.session_state.msgs = [{
-        "content": "Hi, What are your capabilites?",
+        "content": "Hi, what are your capabilites?",
         "is_user": True,
     }, {
         "content": msg1,
         "is_user": False,
     }, {
-        "content": "That's great! I can do the following things. What else can you do?",
+        "content": "That's great!, What else can you do?",
         "is_user": True,
     }, {
         "content": msg2,
-        "is_user": True,
+        "is_user": False,
     }]
 
 
