@@ -1,12 +1,12 @@
-import streamlit.components.v1 as components
 import os
 from typing import Optional, Union
+
+import streamlit.components.v1 as components
 
 try:
     from typing import Literal
 except ImportError:
     from typing_extensions import Literal
-
 
 _RELEASE = True
 COMPONENT_NAME = "st_chat_message"
@@ -18,12 +18,12 @@ if _RELEASE:
 
     _st_chat_message = components.declare_component(
         COMPONENT_NAME,
-        path = build_dir
+        path=build_dir
     )
 else:
     _st_chat_message = components.declare_component(
         COMPONENT_NAME,
-        url = "http://localhost:3000"
+        url="http://localhost:3000"
     )
 
 # data type for avatar style
@@ -59,9 +59,10 @@ AvatarStyle = Literal[
 def message(message: str,
             is_user: Optional[bool] = False,
             avatar_style: Optional[AvatarStyle] = None,
-            logo: Optional[str]=None,
+            logo: Optional[str] = None,
             seed: Optional[Union[int, str]] = 88,
-            key: Optional[str] = None):
+            key: Optional[str] = None,
+            partial: Optional[bool] = False):
     """
     Creates a new instance of streamlit-chat component
 
@@ -85,6 +86,9 @@ def message(message: str,
         An optional key that uniquely identifies this component. If this is
         None, and the component's arguments are changed, the component will
         be re-mounted in the Streamlit frontend and lose its current state.
+    partial: bool or None
+        Indicates that the message is partial, and will be updated later (for
+        example, if the message is being streamed).
 
     Returns: None
     """
@@ -93,11 +97,11 @@ def message(message: str,
     else:
         if not avatar_style:
             avatar_style = "fun-emoji" if is_user else "bottts"
-        _st_chat_message(message=message, seed=seed, isUser=is_user, avatarStyle=avatar_style, key=key)
+        _st_chat_message(message=message, seed=seed, isUser=is_user, avatarStyle=avatar_style, key=key, partial=partial)
 
 
 if not _RELEASE:
-    import streamlit as st  
+    import streamlit as st
 
     long_message = """A chatbot or chatterbot is a software application used to conduct an on-line chat conversation via text or text-to-speech, in lieu of providing direct contact with a live human agent. 
     Designed to convincingly simulate the way a human would behave as a conversational partner, chatbot systems typically require continuous tuning and testing, and many in production remain unable to adequately converse, while none of them can pass the standard Turing test. 
