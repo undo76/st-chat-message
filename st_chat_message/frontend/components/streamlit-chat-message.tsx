@@ -10,7 +10,7 @@ function StreamlitChatMessage() {
     <div
       className={classNames(
         "pb-2 flex",
-        args.isUser ? "flex-row-reverse" : "flex-row"
+        args.isUser ? "flex-row-reverse ml-12" : "flex-row mr-12"
       )}
     >
       <Image
@@ -21,7 +21,7 @@ function StreamlitChatMessage() {
         }
         alt="avatar"
         className={classNames(
-          "border-transparent rounded-lg h-8 w-8",
+          "rounded-md h-8 w-8 shadow bg-gray-200",
           args.isUser ? "ml-4" : "mr-4"
         )}
         width={32}
