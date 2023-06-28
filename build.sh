@@ -13,5 +13,5 @@ poetry version patch
 poetry build
 
 # Publish to PyPi
-#poetry publish --username "$PYPI_USERNAME" --password "$PYPI_PASSWORD"
+#poetry publish
 
