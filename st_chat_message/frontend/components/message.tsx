@@ -51,6 +51,7 @@ function Message({
           <ReactMarkdown
             remarkPlugins={[remarkMath, remarkGfm]}
             rehypePlugins={[rehypeKatex, rehypeRaw]}
+            linkTarget='_blank'
             skipHtml={false}
             remarkRehypeOptions={{
               allowDangerousHtml: true,
